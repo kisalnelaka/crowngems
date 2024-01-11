@@ -34,16 +34,16 @@
 
       <div class="flex items-left">
         <a href="{{ route('accueil')}}" class="flex">
-          <p class="text-2xl font-lora">CrownGems</p>
+          <p class="font-cormorant text-4xl text-semibold">CrownGems</p>
         </a>
       </div>
   
       <div class="flex gap-10 items-center max-md:hidden">
         {{-- <a href="{{ route('accueil') }}" class="text-md cursor-pointer hover:translate-x-2 transition-transform duration-300 ease-in-out">Home</a> --}}
-        <a href="{{ route('gemstones') }}" class="text-md cursor-pointer hover:translate-x-2 transition-transform duration-300 ease-in-out">Gemstones</a>
-        <a href="#" class="text-md cursor-pointer hover:translate-x-2 transition-transform duration-300 ease-in-out">Gem Cutting</a>
-        <a href="#" class="text-md cursor-pointer hover:translate-x-2 transition-transform duration-300 ease-in-out">Gem Mining</a>
-        <a href="{{ route('about-us') }}" class="text-md cursor-pointer hover:translate-x-2 transition-transform duration-300 ease-in-out">About Us</a>
+        <a href="{{ route('gemstones') }}" class="text-md cursor-pointer">Gemstones</a>
+        <a href="#" class="text-md cursor-pointer">Gem Cutting</a>
+        <a href="#" class="text-md cursor-pointer">Gem Mining</a>
+        <a href="{{ route('about-us') }}" class="text-md cursor-pointer">About Us</a>
       </div>
     
 
@@ -55,10 +55,10 @@
             <span class="indicator-item badge badge-secondary h-3 p-2">
               {{ Cart::instance('cart')->content()->count() }} </span> 
               @endif
-              <img src="{{ asset('images/composants/logo/shoppingb.png')}}" alt="cart" srcset="" class="w-6 h-auto hover:translate-x-1  transition-transform duration-300 ease-in-out">
+              <img src="{{ asset('images/composants/logo/cart.png')}}" alt="cart" srcset="" class="w-6 h-auto">
             </a>
         </div>
-        
+        {{-- hover:translate-x-1  transition-transform duration-300 ease-in-out --}}
         @auth
         <a href="{{ route('dashboard')}}"><i class="ri-user-fill text-2xl px-4 border-x border-second "></i></a>
         @else
@@ -83,7 +83,7 @@
           </ul>
         </div>
 
-        <a href="{{ route('register') }}" class=" pl-5 pr-3 max-md:hidden hover:translate-x-2 transition-transform duration-300 ease-in-out">Register</a>
+        <a href="{{ route('register') }}" class=" pl-5 pr-3 max-md:hidden">Register</a>
 
       </div>
 
