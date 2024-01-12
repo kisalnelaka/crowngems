@@ -23,7 +23,7 @@
     
             </div>
 
-            <img src="{{asset('images/composants/confirm.png')}}" loading="lazy" alt="" srcset="" 
+            <img src="{{asset('images/components/confirm.png')}}" loading="lazy" alt="" srcset="" 
             class="object-center object-cover">
     
         </div>
@@ -33,11 +33,11 @@
             <h4 class="p-2">Articles achetées :</h4>
             <div class="max-w-4xl mx-auto grid grid-cols-2 max-md:grid-cols-1 gap-2">
 
-                @foreach($produits as $produit)
+                @foreach($products as $product)
                     <div class="p-4 border border-second bg-white bg-opacity-50">
-                        <p>{{ $produit->description }}</p>
-                        <p>{{ $produit->quantity }}</p>
-                        <p>{{ number_format($produit->price->unit_amount / 100,2,',','.') }}&nbsp; <b class="uppercase">{{ $produit->price->currency }}</b></p>
+                        <p>{{ $product->description }}</p>
+                        <p>{{ $product->quantity }}</p>
+                        <p>{{ number_format($product->price->unit_amount / 100,2,',','.') }}&nbsp; <b class="uppercase">{{ $product->price->currency }}</b></p>
                     </div>
                 @endforeach 
 
@@ -46,7 +46,7 @@
         </div> --}}
 
         <div class="flex flex-row max-sm:flex-col max-sm:text-center max-sm:gap-4 max-sm:w-full justify-between p-8">
-            <a href="{{ route('accueil') }}" class=><button class="py-2 px-4 bg-second text-white font-dmsans rounded shadow-lg ">Rediriger vers l'accueil</button></a>
+            <a href="{{ route('home') }}" class=><button class="py-2 px-4 bg-second text-white font-dmsans rounded shadow-lg ">Rediriger vers l'home</button></a>
             <a href="{{ route('gemstones') }}" class=><button class="py-2 px-4 bg-rose-500 text-white font-dmsans rounded shadow-lg ">Continuer vos achats</button></a>
         </div>
 

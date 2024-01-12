@@ -17,7 +17,7 @@ class gem extends Model
 /*     // Mutator for photo attribute 
     public function setPhotoAttribute($value)
     {
-        $this->attributes['photo'] = 'produits/' . time() . '_' . $value->getClientOriginalName();
+        $this->attributes['photo'] = 'products/' . time() . '_' . $value->getClientOriginalName();
     }
 
     // Accessor for photo attribute

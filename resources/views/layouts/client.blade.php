@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/composants/logo/apple-touch-icon.png') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/composants/logo/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/composants/logo/favicon-16x16.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/components/logo/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/components/logo/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/components/logo/favicon-16x16.png') }}">
 
   <title>CrownGems</title>
 
@@ -33,13 +33,13 @@
     <nav class="cabin flex justify-between px-6 py-3 max-w-5xl mx-auto text-first">
 
       <div class="flex items-left">
-        <a href="{{ route('accueil')}}" class="flex">
+        <a href="{{ route('home')}}" class="flex">
           <p class="font-cormorant text-4xl text-semibold">CrownGems</p>
         </a>
       </div>
   
       <div class="flex gap-10 items-center max-md:hidden">
-        {{-- <a href="{{ route('accueil') }}" class="text-md cursor-pointer hover:translate-x-2 transition-transform duration-300 ease-in-out">Home</a> --}}
+        {{-- <a href="{{ route('home') }}" class="text-md cursor-pointer hover:translate-x-2 transition-transform duration-300 ease-in-out">Home</a> --}}
         <a href="{{ route('gemstones') }}" class="text-md cursor-pointer">Gemstones</a>
         <a href="#" class="text-md cursor-pointer">Gem Cutting</a>
         <a href="#" class="text-md cursor-pointer">Gem Mining</a>
@@ -50,12 +50,12 @@
       <div class="flex items-right">
 
         <div class="indicator mx-4">
-          <a href="{{ route('panier')}}">
+          <a href="{{ route('cart')}}">
             @if( Cart::instance('cart')->content()->count() > 0)
             <span class="indicator-item badge badge-secondary h-3 p-2">
               {{ Cart::instance('cart')->content()->count() }} </span> 
               @endif
-              <img src="{{ asset('images/composants/logo/cart.png')}}" alt="cart" srcset="" class="w-6 h-auto">
+              <img src="{{ asset('images/components/logo/cart.png')}}" alt="cart" srcset="" class="w-6 h-auto">
             </a>
         </div>
         {{-- hover:translate-x-1  transition-transform duration-300 ease-in-out --}}

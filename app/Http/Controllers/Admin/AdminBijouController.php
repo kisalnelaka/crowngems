@@ -99,16 +99,16 @@ class AdminGemController extends Controller
         // Upload des photos :
         if ($request->hasFile('photo1')) {
             $photo = $request->file('photo1');
-            $data['photo1'] = $photo->store('produits', 'public');
+            $data['photo1'] = $photo->store('products', 'public');
         }
         if ($request->hasFile('photo2')) {
             $photo = $request->file('photo2');
-            $data['photo2'] = $photo->store('produits', 'public');
+            $data['photo2'] = $photo->store('products', 'public');
         }
 
         JewelryProduct::create($data);
 
-        return redirect()->route('produits.index')
-            ->with('success', 'Produit créé avec succès.');
+        return redirect()->route('products.index')
+            ->with('success', 'Product créé avec succès.');
     }*/
 }

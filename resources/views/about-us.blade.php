@@ -4,7 +4,7 @@
 
 <div class="antialiased w-full bg-third pb-8">
 
-    <div class="h-72 max-sm:h-60 max-w-7xl mx-auto bg-cover bg-center shadow-xl" style="background-image:url({{asset('images/composants/landing-md.jpg')}});">
+    <div class="h-72 max-sm:h-60 max-w-7xl mx-auto bg-cover bg-center shadow-xl" style="background-image:url({{asset('images/components/landing-md.jpg')}});">
         <div class="h-full w-full bg-slate-950 bg-opacity-30">
           <div class="flex items-center justify-center h-full pt-36">
             <p class="text-3xl text-second font-playfair font-semibold">About Us</p>
@@ -31,7 +31,7 @@
     <div class="w-full">
         <div class="max-w-6xl mx-auto grid grid-cols-5 max-md:grid-cols-1 place-items-center">
             <div class="md:col-span-2 p-8 max-md:p-6">
-                <img class="w-96 h-auto object-center object-cover aspect-square border-2 border-second shadow-xl rounded-tr-3xl rounded-bl-3xl" src="{{ asset('images/composants/shop (1).jpg')}}" alt="shop(1)">
+                <img class="w-96 h-auto object-center object-cover aspect-square border-2 border-second shadow-xl rounded-tr-3xl rounded-bl-3xl" src="{{ asset('images/components/shop (1).jpg')}}" alt="shop(1)">
             </div>
 
             <div class="md:col-span-3 flex flex-col gap-4 max-md:text-center justify-center text-fourth font-dmsans md:px-4 max-md:p-4 max-md:h-96">
@@ -57,7 +57,7 @@
             </div>
 
             <div class="p-4 max-md:p-6">
-                <img class="object-center object-cover w-80 h-auto border-4 rounded-t-full border-third shadow-xl " src="{{ asset('images/composants/element (1).jpg')}}" alt="shop(1)">
+                <img class="object-center object-cover w-80 h-auto border-4 rounded-t-full border-third shadow-xl " src="{{ asset('images/components/element (1).jpg')}}" alt="shop(1)">
             </div>
 
         </div>
@@ -67,7 +67,7 @@
     <div class="w-full">
         <div class="max-w-6xl mx-auto grid grid-cols-5 max-md:grid-cols-1 place-items-center">
             <div class="md:col-span-2 p-8 max-md:p-6">
-                <img class="w-96 h-auto object-center object-cover aspect-square border-2 border-secondDarker shadow-xl rounded-tr-3xl rounded-bl-3xl" src="{{ asset('images/composants/shop (2).jpg')}}" alt="shop(1)">
+                <img class="w-96 h-auto object-center object-cover aspect-square border-2 border-secondDarker shadow-xl rounded-tr-3xl rounded-bl-3xl" src="{{ asset('images/components/shop (2).jpg')}}" alt="shop(1)">
             </div>
 
             <div class="md:col-span-3 flex flex-col gap-4 max-md:text-center justify-center text-fourth font-dmsans md:px-4 max-md:p-4 max-md:h-96">
@@ -94,7 +94,7 @@
             </div>
 
             <div class="p-4 max-md:p-6">
-                <img class="object-center object-cover w-80 h-auto border-4 border-third shadow-xl rounded-tl-3xl rounded-br-3xl" src="{{ asset('images/composants/shop (3).jpg')}}" alt="shop(1)">
+                <img class="object-center object-cover w-80 h-auto border-4 border-third shadow-xl rounded-tl-3xl rounded-br-3xl" src="{{ asset('images/components/shop (3).jpg')}}" alt="shop(1)">
             </div>
 
         </div>

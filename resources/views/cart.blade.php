@@ -3,7 +3,7 @@
 @section('content')
 <div class="w-full bg-third">
 
-  <div class="h-72 max-sm:h-60 max-w-7xl mx-auto bg-cover bg-center" style="background-image:url({{asset('images/composants/gems-panier.jpg')}});">
+  <div class="h-72 max-sm:h-60 max-w-7xl mx-auto bg-cover bg-center" style="background-image:url({{asset('images/components/gems-cart.jpg')}});">
     <div class="h-full w-full bg-gray-950 bg-opacity-60">
       <div class="flex items-center justify-center h-full pt-36">
         <p class="text-3xl text-white font-playfair font-semibold">Your Cart</p>
@@ -30,7 +30,7 @@
 
     <div class="mx-auto sm:px-8 sm:py-14 max-sm:py-6 max-w-6xl flex sm:flex-row max-sm:flex-col font-dmsans">
 
-          {{-- Section Produit --}}
+          {{-- Section Product --}}
         <div class="wrapper sm:mx-4 sm:w-2/3 max-sm:w-full">
           <p class="text-xl font-semibold p-4">Your Cart ({{ $cartItems->count() }})</p>
 
@@ -38,9 +38,9 @@
               <div class="flex flex-row max-sm:flex-col items-center p-1 border-b border-second border-opacity-40 max-sm:gap-3 max-sm:mx-12">
                   {{-- Photo --}}
                   <div class="sm:w-1/4">
-                    <img src="{{ asset('images/produits/' . $item->model->photo1) }}" alt="{{ $item->model->photo1 }}" class="sm:w-40 max-sm:w-52 aspect-square object-cover shadow border border-amber-800 border-opacity-40">
+                    <img src="{{ asset('images/products/' . $item->model->photo1) }}" alt="{{ $item->model->photo1 }}" class="sm:w-40 max-sm:w-52 aspect-square object-cover shadow border border-amber-800 border-opacity-40">
                   </div>
-                  {{-- Infos du Produit --}}
+                  {{-- Infos du Product --}}
                   <div class="sm:w-3/4 max-sm:text-center sm:p-2 max-sm:py-2 items-center">
                     <p class="text-lg text-fourth font-semibold">{{ $item->name }}</p>
                     <p class="text-sm mt-2 italic text-fourth pl-1">Price : {{ $item->price }} $</p>
@@ -50,7 +50,7 @@
                   {{-- Options --}}
                   <div class="w-fit mx-auto flex flex-row gap-3 items-center pt-3">
                     {{-- Modifier Quantité --}}
-                    <form method="post" action="{{ route('updatePanier', $item->rowId) }}">
+                    <form method="post" action="{{ route('updateCart', $item->rowId) }}">
                       @csrf
                       <input type="hidden" name="_method" value="put">
                       <div class="flex flex-row gap-2 items-center">
@@ -59,8 +59,8 @@
                       </div>
                     </form> 
 
-                    {{-- Supprimer Produit --}}
-                    <form method="post" action="{{ route('retirerPanier', $item->rowId) }}">
+                    {{-- Supprimer Product --}}
+                    <form method="post" action="{{ route('retirerCart', $item->rowId) }}">
                       @csrf
                       @method('delete')
                       <button type="submit" class="md:px-3 p-2 bg-red-600 hover:bg-red-700 transition bg-opacity-80 shadow rounded text-xs text-fourth">DELETE&nbsp;&#11199</button>
@@ -116,7 +116,7 @@
 
       {{-- Onglet Anneaux --}}
         <div class="relative w-1/3 flex flex-col bg-cover bg-center h-full aspect-square max-md:w-3/4" 
-          style="background-image:url({{ asset('images/produits/ring2.jpg') }})">
+          style="background-image:url({{ asset('images/products/ring2.jpg') }})">
 
             <div class="w-full h-full bg-stone-800 bg-opacity-40 hover:bg-opacity-10 transition">
               <a href="{{ route('shopCategoryFilter',['typeGem' =>'Anneau'])}}" class="h-full w-full absolute"></a></div>
@@ -125,7 +125,7 @@
 
       {{-- Onglet Colliers --}}
         <div class="relative w-1/3 flex flex-col bg-cover bg-center h-full aspect-square max-md:w-3/4" 
-          style="background-image:url({{ asset('images/produits/necklace2.jpg') }})">
+          style="background-image:url({{ asset('images/products/necklace2.jpg') }})">
 
             <div class="w-full h-full bg-stone-800 bg-opacity-40 hover:bg-opacity-10 transition">
               <a href="{{ route('shopCategoryFilter',['typeGem' =>'Collier'])}}"  class="h-full w-full absolute"></a></div>
@@ -134,7 +134,7 @@
 
       {{-- Onglet Bracelets --}}
         <div class="relative w-1/3 flex flex-col bg-cover bg-center h-full aspect-square max-md:w-3/4" 
-        style="background-image:url({{ asset('images/produits/bracelet2.jpg') }})">
+        style="background-image:url({{ asset('images/products/bracelet2.jpg') }})">
 
           <div class="w-full h-full bg-stone-800 bg-opacity-40 hover:bg-opacity-10 transition">
             <a href="{{ route('shopCategoryFilter',['typeGem' =>'Bracelet'])}}" class="h-full w-full absolute"></a></div>
@@ -143,7 +143,7 @@
 
         {{-- Onglet Bracelets --}}
         <div class="relative w-1/3 flex flex-col bg-cover bg-center h-full aspect-square max-md:w-3/4" 
-        style="background-image:url({{ asset('images/produits/boucles2.jpg') }})">
+        style="background-image:url({{ asset('images/products/boucles2.jpg') }})">
 
           <div class="w-full h-full bg-stone-800 bg-opacity-40 hover:bg-opacity-10 transition">
             <a href="{{ route('shopCategoryFilter',['typeGem' =>'Boucles oreilles'])}}" class="h-full w-full absolute"></a></div>

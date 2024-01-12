@@ -27,7 +27,7 @@
 
           @foreach($gems as $gem)
             <tr class="border-b-slate-300 hover:bg-sky-100">
-              <td class="max-md:hidden"><div class="avatar"><div class="mask h-8 w-8"><img src="{{ asset('images/produits/'.$gem->photo1) }}" alt="gem image"/></div></div></td>
+              <td class="max-md:hidden"><div class="avatar"><div class="mask h-8 w-8"><img src="{{ asset('images/products/'.$gem->photo1) }}" alt="gem image"/></div></div></td>
               <td> {{ $gem->nom }} </td>
               <td> {{ $gem->prix }} $</td>
               <td> {{ $gem->type }} </td>

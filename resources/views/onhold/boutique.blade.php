@@ -5,7 +5,7 @@
 <div class="lg:mx-24 xl:mx-48">
 
   <!-- Section Anneau -->
-  <div class="hero h-48 max-sm:h-28 shadow-md" style="background-image: url(images/composants/bg-ring.jpg);">
+  <div class="hero h-48 max-sm:h-28 shadow-md" style="background-image: url(images/components/bg-ring.jpg);">
     <div class="hero-overlay bg-yellow-800 bg-opacity-70"></div>
     <div class="hero-content text-center text-black ">
       <div class="max-w-md">
@@ -21,7 +21,7 @@
       <a href="{{ route('gem',[ 'slug' => $gem->slug]) }}">
         <div class="card w-50 bg-base-100 shadow-xl flex flex-col items-center m-1">
           <figure class="px-2 pt-2">
-            <img src="{{ asset('images/produits/'. $gem->photo1 )}}" loading="lazy"
+            <img src="{{ asset('images/products/'. $gem->photo1 )}}" loading="lazy"
             alt="img gem database"
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>
@@ -36,7 +36,7 @@
   </div>
 
   <!-- Section Collier -->
-  <div class="hero h-48 max-sm:h-28 mt-8 shadow-md" style="background-image: url(images/composants/bg-collier.jpg);">
+  <div class="hero h-48 max-sm:h-28 mt-8 shadow-md" style="background-image: url(images/components/bg-collier.jpg);">
     <div class="hero-overlay bg-amber-800 bg-opacity-70"></div>
     <div class="hero-content text-center text-white">
       <div class="max-w-md">
@@ -52,7 +52,7 @@
       <a href="{{ route('gem',[ 'slug' => $gem->slug]) }}">
         <div class="card w-50 bg-base-100 shadow-xl flex flex-col items-center m-1">
           <figure class="px-2 pt-2">
-            <img src="{{ asset('images/produits/'. $gem->photo1 )}}" loading="lazy"
+            <img src="{{ asset('images/products/'. $gem->photo1 )}}" loading="lazy"
             alt="img gem database"
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>
@@ -67,7 +67,7 @@
   </div>
 
   <!-- Section Bracelet -->
-  <div class="hero h-48 max-sm:h-28 mt-8 shadow-md" style="background-image: url(images/composants/bg-bracelet.jpg);">
+  <div class="hero h-48 max-sm:h-28 mt-8 shadow-md" style="background-image: url(images/components/bg-bracelet.jpg);">
     <div class="hero-overlay bg-yellow-800 bg-opacity-70"></div>
     <div class="hero-content text-center text-white">
       <div class="max-w-md">
@@ -83,7 +83,7 @@
       <a href="{{ route('gem',[ 'slug' => $gem->slug]) }}">
         <div class="card w-50 bg-base-100 shadow-xl flex flex-col items-center m-1">
           <figure class="px-2 pt-2">
-            <img src="{{ asset('images/produits/'. $gem->photo1 )}}" loading="lazy"
+            <img src="{{ asset('images/products/'. $gem->photo1 )}}" loading="lazy"
             alt="img gem database"
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>

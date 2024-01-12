@@ -23,24 +23,24 @@
 
             <div class="lg:flex lg:flex-row gap-6">
             
-                <!-- Section des détails du produit -->
+                <!-- Section des détails du product -->
                 <div class="lg:w-2/3">
                     <!-- for meduim / big format -->
                     <div class="grid md:grid-cols-2 gap-4 max-sm:hidden ">
-                        <div><img src="{{ asset('images/produits/' . $gem->photo1) }}" alt="Photo 1" class="w-full aspect-square object-cover shadow-lg"></div>
-                        <div><img src="{{ asset('images/produits/' . $gem->photo2) }}" alt="Photo 2" class="w-full aspect-square object-cover shadow-lg"></div>
+                        <div><img src="{{ asset('images/products/' . $gem->photo1) }}" alt="Photo 1" class="w-full aspect-square object-cover shadow-lg"></div>
+                        <div><img src="{{ asset('images/products/' . $gem->photo2) }}" alt="Photo 2" class="w-full aspect-square object-cover shadow-lg"></div>
                     </div>
 
                     <!-- for mobile format -->
                     <div class="carousel max-w-sm aspect-square object-cover md:hidden shadow-lg">
                         <div id="slide1" class="carousel-item relative w-full">
-                        <img src="{{ asset('images/produits/' . $gem->photo1) }}" class="w-full" />
+                        <img src="{{ asset('images/products/' . $gem->photo1) }}" class="w-full" />
                         <div class="absolute flex justify-between transform -translate-y-1/2 right-5 top-1/2">
                             <a href="#slide2" class="btn btn-circle">❯</a>
                         </div>
                         </div> 
                         <div id="slide2" class="carousel-item relative w-full">
-                        <img src="{{ asset('images/produits/' . $gem->photo2) }}" class="w-full" />
+                        <img src="{{ asset('images/products/' . $gem->photo2) }}" class="w-full" />
                         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 top-1/2">
                             <a href="#slide1" class="btn btn-circle">❮</a> 
                         </div>
@@ -51,7 +51,7 @@
                     <p class="mt-4 text-gray-700 max-sm:text-center max-sm:px-2">{{ $gem->description }}</p>
                     
                     <div class="mt-4">
-                        <p class="text-xl font-semibold text-gray-800 max-sm:text-base font-playfair">Détails du produit</p>
+                        <p class="text-xl font-semibold text-gray-800 max-sm:text-base font-playfair">Détails du product</p>
                         <ul class="list-disc pl-6 mt-2">
                             <li>Type : {{ $gem->type }}</li>
                             <li>Prix : {{ $gem->prix }} $</li>
@@ -59,15 +59,15 @@
                         </ul>
                     </div>
 
-                    <!-- Section panier / Wishlist -->
+                    <!-- Section cart / Wishlist -->
                     <div class="mt-6 flex flex-row max-sm:flex-col gap-2">
 
-                        <!-- Panier -->
-                        <form id="ajouterPanier" action="{{ route('ajouterProduitPanier') }}" method="post">
+                        <!-- Cart -->
+                        <form id="ajouterCart" action="{{ route('ajouterProductCart') }}" method="post">
                             @csrf
                             <input type="hidden" name="id" value="{{ $gem->id }}">
                             <input type="hidden" name="quantity" id="qty" value="1">
-                            <input type="submit" value="Ajouter au panier" class="bg-secondary text-white font-semibold rounded-md max-sm:w-full px-3 py-3">
+                            <input type="submit" value="Ajouter au cart" class="bg-secondary text-white font-semibold rounded-md max-sm:w-full px-3 py-3">
                         </form>
 
 
@@ -79,7 +79,7 @@
                     </div>
                 </div>
 
-                <!-- Section des produits similaires -->
+                <!-- Section des products similaires -->
                 <div class="lg:w-1/3 grid lg:grid-cols-2 max-lg:grid-cols-4 items-center gap-2 p-3">
 
                     @foreach ($gemsSimilaires as $gemSimilaire)
@@ -87,8 +87,8 @@
                     <a href="{{ route('gem',[ 'slug' => $gemSimilaire->slug]) }}">
             
                         <div class="flex flex-col place-items-center border border-second relative">
-                        <img src="{{ asset('images/produits/'. $gemSimilaire->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center absolute hover:opacity-0 transition-all">
-                        <img src="{{ asset('images/produits/'. $gemSimilaire->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center">
+                        <img src="{{ asset('images/products/'. $gemSimilaire->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center absolute hover:opacity-0 transition-all">
+                        <img src="{{ asset('images/products/'. $gemSimilaire->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center">
                         <div class="flex flex-col sm:text-sm max-sm:text-xs text-center border-t border-second w-full p-1">
                             <p class="truncate font-semibold">{{ $gemSimilaire->nom }}</p>
                             <p class="text-xs"> {{ $gemSimilaire->type_metal }}</p> 

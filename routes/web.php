@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PanierController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GemController;
 use App\Http\Controllers\NewsletterController;
@@ -32,7 +32,7 @@ Route::get('/about-us', function () { return view('about-us');     })
     ->name('about-us');
 
 //Display de gems
-Route::get('/', function(){ return view('accueil'); })->name('accueil');
+Route::get('/', function(){ return view('home'); })->name('home');
 Route::get('/gemstones', [GemController::class, 'index'])->name('gemstones');
 Route::get('/gems/{slug}', [GemController::class,'show'])->name('gem');
 
@@ -46,16 +46,16 @@ Route::get('/gemstones/byPrix',[ShopController::class,'sortPrix'])->name('shopPr
 Route::get('/gemstones/byPrixRange',[ShopController::class,'sortPrixRange'])->name('shopPrixRangeFilter');
 Route::get('/gemstones/Order',[ShopController::class,''])->name('shopSortingOrder');
 
-//Panier
-Route::get('/panier',[PanierController::class,'index'])->name('panier');
-Route::post('/panier-add',[PanierController::class,'addToCart'])->name('ajouterProduitPanier');
-Route::put('/panier-update/{rowId}',[PanierController::class,'updateCart'])->name('updatePanier');
-Route::delete('/panier-delete/{rowId}',[PanierController::class,'deleteItem'])->name('retirerPanier');
+//Cart
+Route::get('/cart',[CartController::class,'index'])->name('cart');
+Route::post('/cart-add',[CartController::class,'addToCart'])->name('ajouterProductCart');
+Route::put('/cart-update/{rowId}',[CartController::class,'updateCart'])->name('updateCart');
+Route::delete('/cart-delete/{rowId}',[CartController::class,'deleteItem'])->name('retirerCart');
 
 //Paiement 
-Route::post('/checkout',[PanierController::class,'checkout'])->name('checkout');
-Route::get('/success',[PanierController::class,'success'])->name('success');
-Route::get('/cancel',[PanierController::class,'cancel'])->name('cancel');
+Route::post('/checkout',[CartController::class,'checkout'])->name('checkout');
+Route::get('/success',[CartController::class,'success'])->name('success');
+Route::get('/cancel',[CartController::class,'cancel'])->name('cancel');
 
 //Profil :
 Route::middleware('auth')->group(function () {

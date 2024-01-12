@@ -11,7 +11,7 @@ use Stripe\Stripe;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
-class PanierController extends Controller{
+class CartController extends Controller{
 
     public function index(){
 
@@ -27,7 +27,7 @@ class PanierController extends Controller{
         
         $total = $subtotal + $livraison;
 
-        return view('panier',['cartItems'=>$cartItems ],compact('livraison','total'));
+        return view('cart',['cartItems'=>$cartItems ],compact('livraison','total'));
     }
 
     public function addToCart(Request $request){
@@ -49,10 +49,10 @@ class PanierController extends Controller{
             
             $cart->update($rowId, $quantity);
 
-            return redirect()->route('panier')->with('success', 'Quantity updated successfully!');
+            return redirect()->route('cart')->with('success', 'Quantity updated successfully!');
         }
     
-        return redirect()->route('panier')->with('error', 'Item not found in cart.');
+        return redirect()->route('cart')->with('error', 'Item not found in cart.');
     }
     
 
@@ -63,39 +63,39 @@ class PanierController extends Controller{
 
         if ($item) {
         Cart::remove($rowId);
-        return redirect()->route('panier')->with('success', 'Item successfully removed from cart!');
+        return redirect()->route('cart')->with('success', 'Item successfully removed from cart!');
         }
 
-        return redirect()->route('panier')->with('error', 'Item not found in cart.');
+        return redirect()->route('cart')->with('error', 'Item not found in cart.');
     }   
 
     public function checkout(){
 
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
-        $produitsPanier = Cart::instance('cart')->content();
+        $productsCart = Cart::instance('cart')->content();
 
         $prixTotal = 0;
 
         $lineItems =[];
 
-        foreach($produitsPanier as $produit){
+        foreach($productsCart as $product){
 
-            $prixTotal += $produit->price;
+            $prixTotal += $product->price;
 
             $lineItems[] = [
                 'price_data' => [
                     'currency' => 'usd',
                     'product_data' => [
-                        'name' => $produit->name,
-                        'images' => ['images/produits/'. $produit->model->photo1],
+                        'name' => $product->name,
+                        'images' => ['images/products/'. $product->model->photo1],
                      ],
-                    'unit_amount' => $produit->price * 100,],
-                'quantity' => $produit->qty,
+                    'unit_amount' => $product->price * 100,],
+                'quantity' => $product->qty,
             ];
         }
 
-        if(count($produitsPanier) >= 3){
+        if(count($productsCart) >= 3){
             $livraison = 60;
         }else{
             $livraison = 45;
@@ -143,9 +143,9 @@ class PanierController extends Controller{
             //Détails du client ( address->country , email, name)
             $client = $session->customer_details;
 
-            $produits = $session->allLineItems($sessionId,null,null);
+            $products = $session->allLineItems($sessionId,null,null);
 
-            $descriptions = collect($produits)->pluck('description')->unique()->toArray();
+            $descriptions = collect($products)->pluck('description')->unique()->toArray();
 
             $order = Order::where('session_id', $sessionId)->first();
 
@@ -168,7 +168,7 @@ class PanierController extends Controller{
 
         $this->index();
 
-        return view('panier')->with('error','Payment failed. Check your data or try again later. Contact support if you have a persistent problem. THANKS.');
+        return view('cart')->with('error','Payment failed. Check your data or try again later. Contact support if you have a persistent problem. THANKS.');
     }
 
 

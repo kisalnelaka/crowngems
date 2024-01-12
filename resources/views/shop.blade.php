@@ -5,7 +5,7 @@
 
 <div class="w-full font-dmsans font-swap bg-third">
 
-  <div class="max-w-7xl mx-auto md:h-60 max-md:h-48 bg-cover bg-center" style="background-image:url({{ asset('images/composants/bg-hero.jpg')}});">
+  <div class="max-w-7xl mx-auto md:h-60 max-md:h-48 bg-cover bg-center" style="background-image:url({{ asset('images/components/bg-hero.jpg')}});">
     <div class="h-full w-full bg-amber-950 bg-opacity-30">
       <div class="flex items-center justify-center h-full md:pt-36 max-md:pt-24">
         <p class="md:text-4xl max-md:text-3xl text-fourth font-cormorant font-bold">Gemstones</p>
@@ -51,7 +51,7 @@
         <div x-show="open1" x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
 
-          @include('composants/shopCategoryForm')
+          @include('components/shopCategoryForm')
         </div>
       </div>
 
@@ -68,7 +68,7 @@
         <div x-show="open2" x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
 
-          @include('composants/shopPriceForm')
+          @include('components/shopPriceForm')
         </div>
 
       </div>
@@ -86,7 +86,7 @@
         <div x-show="open3" x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
 
-          @include('composants/shopPriceRangeForm')
+          @include('components/shopPriceRangeForm')
         </div>
       </div>
 
@@ -110,7 +110,7 @@
       </div>
 
 
-      {{-- Produits --}}
+      {{-- Products --}}
       <div class="grid lg:grid-cols-4 md:grid-cols-3 max-md:grid-cols-2 items-center gap-2">
 
         @foreach ($gems as $gem)
@@ -118,8 +118,8 @@
           <a href="{{ route('gem',[ 'slug' => $gem->slug]) }}">
 
             <div class="flex flex-col place-items-center relative shadow-lg rounded-2xl">
-              <img src="{{ asset('images/produits/'. $gem->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl absolute hover:opacity-0 transition-all">
-              <img src="{{ asset('images/produits/'. $gem->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl">
+              <img src="{{ asset('images/products/'. $gem->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl absolute hover:opacity-0 transition-all">
+              <img src="{{ asset('images/products/'. $gem->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl">
               <div class="flex flex-col sm:text-sm max-sm:text-xs text-center border-t border-second w-full p-1">
                 <p class="truncate font-semibold">{{ $gem->nom }}</p>
                 <p class="text-xs"> {{ $gem->type_metal }}</p> 

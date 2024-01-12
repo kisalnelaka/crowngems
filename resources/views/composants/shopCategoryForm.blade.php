@@ -3,7 +3,7 @@
   @csrf  
 
   <a href="{{ route('gemstones')}}">
-  <input type="radio" name="touslesproduits">&nbsp; All products</a>
+  <input type="radio" name="touslesproducts">&nbsp; All products</a>
   
   <label for="typeGem">
     <input type="radio" name="typeGem" value="Anneau"

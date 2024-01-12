@@ -9,14 +9,14 @@ class GemController extends Controller
 {
     public function index(){
         
-        //Tous les produits 
+        //Tous les products 
         $gems = gem::Paginate(24);
         return view('shop', compact('gems'));
     }
 
     public function show($slug){
 
-        //Produit avec similaires selon collection
+        //Product avec similaires selon collection
         $gem = gem::where('slug', $slug)->first();
 
         if (!$gem) { abort(404); }
@@ -25,7 +25,7 @@ class GemController extends Controller
         ->where( 'id' , '!=', $gem->id)
         ->limit(8)
         ->get();
-        return view('produit', compact('gem','gemsSimilaires'));
+        return view('product', compact('gem','gemsSimilaires'));
     }
 
 
