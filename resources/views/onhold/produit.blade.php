@@ -47,7 +47,7 @@
                         </div> 
                     </div>
 
-                    <h1 class="text-3xl font-semibold m-4 max-sm:text-xl max-sm:text-center">{{ $gem->nom }}</h1>
+                    <h1 class="text-3xl font-semibold m-4 max-sm:text-xl max-sm:text-center">{{ $gem->name }}</h1>
                     <p class="mt-4 text-gray-700 max-sm:text-center max-sm:px-2">{{ $gem->description }}</p>
                     
                     <div class="mt-4">
@@ -90,7 +90,7 @@
                         <img src="{{ asset('images/products/'. $gemSimilaire->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center absolute hover:opacity-0 transition-all">
                         <img src="{{ asset('images/products/'. $gemSimilaire->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center">
                         <div class="flex flex-col sm:text-sm max-sm:text-xs text-center border-t border-second w-full p-1">
-                            <p class="truncate font-semibold">{{ $gemSimilaire->nom }}</p>
+                            <p class="truncate font-semibold">{{ $gemSimilaire->name }}</p>
                             <p class="text-xs"> {{ $gemSimilaire->type_metal }}</p> 
                             <p class="font-semibold text-amber-800" >{{ $gemSimilaire->prix }} $</p>
                         </div>

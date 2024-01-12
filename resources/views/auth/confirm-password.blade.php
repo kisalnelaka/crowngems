@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600">
-        {{ __('Ceci est une zone sécurisée de l\'application. Veuillez confirmer votre mot de passe avant de continuer.') }}
+        {{ __('Ceci est une zone sécurisée de l\'application. Veuillez confirm votre Password avant de continuer.') }}
     </div>
 
     <form method="POST" action="{{ route('password.confirm') }}">
@@ -8,7 +8,7 @@
 
         <!-- Password -->
         <div>
-            <x-input-label for="password" :value="__('Mot de passe')" />
+            <x-input-label for="password" :value="__('Password')" />
 
             <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
@@ -20,7 +20,7 @@
 
         <div class="flex justify-end mt-4">
             <x-primary-button>
-                {{ __('Confirmer') }}
+                {{ __('Confirm') }}
             </x-primary-button>
         </div>
     </form>

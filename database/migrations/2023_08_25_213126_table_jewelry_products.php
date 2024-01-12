@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('jewelry_products', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('name');
             $table->decimal('prix', 10, 2);
             $table->string('slug')->unique();
 

@@ -77,7 +77,7 @@ class AdminGemController extends Controller
     {
 
         $data = $request->validate([
-            'nom' => 'required',
+            'name' => 'required',
             'description' => 'required',
             'type' => 'required',
             'collection' => 'required',
@@ -89,10 +89,10 @@ class AdminGemController extends Controller
         ]);
 
         //Unique Slug setup pour lien :
-        $slug = Str::slug($data['nom'] . '-' . $data['type'] . '-' . $data['collection']);
+        $slug = Str::slug($data['name'] . '-' . $data['type'] . '-' . $data['collection']);
         $count = 1;
         while (JewelryProduct::where('slug', $slug)->exists()) {
-            $slug = Str::slug($data['nom'] . '-' . $data['type'] . '-' . $data['collection'] . '-' . $count++);
+            $slug = Str::slug($data['name'] . '-' . $data['type'] . '-' . $data['collection'] . '-' . $count++);
         }
         $data['slug'] = $slug;
 

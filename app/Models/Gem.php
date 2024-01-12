@@ -11,7 +11,7 @@ class gem extends Model
 
     protected $table = 'jewelry_products';
     protected $fillable = [
-        'nom', 'description','type', 'prix', 'qte_stock', 'type_metal'
+        'name', 'description','type', 'prix', 'qte_stock', 'type_metal'
     ];
 
 /*     // Mutator for photo attribute 

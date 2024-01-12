@@ -14,7 +14,7 @@
         <thead class="text-lightBlue">
           <tr class="border-b-slate-300">
             <th class="max-md:hidden text-center  ">Photo</th>
-            <th>Nom</th>
+            <th>Name</th>
             <th>Prix</th>
             <th>Type</th>
             <th>Qte Stock</th>
@@ -28,7 +28,7 @@
           @foreach($gems as $gem)
             <tr class="border-b-slate-300 hover:bg-sky-100">
               <td class="max-md:hidden"><div class="avatar"><div class="mask h-8 w-8"><img src="{{ asset('images/products/'.$gem->photo1) }}" alt="gem image"/></div></div></td>
-              <td> {{ $gem->nom }} </td>
+              <td> {{ $gem->name }} </td>
               <td> {{ $gem->prix }} $</td>
               <td> {{ $gem->type }} </td>
               <td> {{ $gem->qte_stock}} </td>

@@ -26,7 +26,7 @@
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>
 
-          <h2 class="font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->nom }}</h2>
+          <h2 class="font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->name }}</h2>
           <p class="text-sm "> {{ $gem->type_metal }}</p> 
           <p class="text-sm pb-1.5" >{{ $gem->prix }} $</p>
         </div>
@@ -57,7 +57,7 @@
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>
 
-          <h2 class="font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->nom }}</h2>
+          <h2 class="font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->name }}</h2>
           <p class="text-sm "> {{ $gem->type_metal }}</p> 
           <p class="text-sm pb-1.5" >{{ $gem->prix }} $</p>
         </div>
@@ -88,7 +88,7 @@
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>
 
-          <h2 class=" font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->nom }}</h2>
+          <h2 class=" font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->name }}</h2>
           <p class="text-sm "> {{ $gem->type_metal }}</p> 
           <p class="text-sm pb-1.5" >{{ $gem->prix }} $</p>
         </div>

@@ -121,7 +121,7 @@
               <img src="{{ asset('images/products/'. $gem->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl absolute hover:opacity-0 transition-all">
               <img src="{{ asset('images/products/'. $gem->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl">
               <div class="flex flex-col sm:text-sm max-sm:text-xs text-center border-t border-second w-full p-1">
-                <p class="truncate font-semibold">{{ $gem->nom }}</p>
+                <p class="truncate font-semibold">{{ $gem->name }}</p>
                 <p class="text-xs"> {{ $gem->type_metal }}</p> 
                 <p class="font-semibold text-fourth" >{{ $gem->prix }} $</p>
               </div>
@@ -149,7 +149,7 @@
 
     @foreach($gems as $gem)
       <div class="font-dmsans text-sm p-2 border border-second rounded">
-        <p> {{ $gem->nom }} / {{ $gem->id }}</p>
+        <p> {{ $gem->name }} / {{ $gem->id }}</p>
         <p class="font-semibold"> {{ $gem->type }} </p>
         <p> {{ $gem->type_metal }} </p>
         <p> {{ $gem->prix }} $</p>

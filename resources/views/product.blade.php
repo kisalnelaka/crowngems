@@ -50,7 +50,7 @@
           {{-- Description et Ajout au cart --}}
           <div class="flex flex-col font-playfair p-4 max-md:w-96 max-md:mx-auto max-md:items-center">
 
-            <h2 class="text-2xl font-bold text-fourth">{{ $gem->nom }}</h2>
+            <h2 class="text-2xl font-bold text-fourth">{{ $gem->name }}</h2>
             <p class="font-dmsans font-semibold pt-4 text-fourth">{{ $gem->prix }} $</p>
 
             <div class="bg-second hover:bg-amber-700 transition text-fourth w-fit flex items-center font-dmsans text-center  my-4">
@@ -86,7 +86,7 @@
                 <img src="{{ asset('images/products/'. $gemSimilaire->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center absolute hover:opacity-0 transition-all">
                 <img src="{{ asset('images/products/'. $gemSimilaire->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center">
                 <div class="flex flex-col sm:text-sm max-sm:text-xs text-center border-t border-second w-full p-1">
-                  <p class="truncate font-semibold text-fourth">{{ $gemSimilaire->nom }}</p>
+                  <p class="truncate font-semibold text-fourth">{{ $gemSimilaire->name }}</p>
                   <p class="text-xs text-fourth"> {{ $gemSimilaire->type_metal }}</p> 
                   <p class="font-semibold text-amber-800" >{{ $gemSimilaire->prix }} $</p>
                 </div>

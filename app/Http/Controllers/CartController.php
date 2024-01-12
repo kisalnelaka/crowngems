@@ -33,7 +33,7 @@ class CartController extends Controller{
     public function addToCart(Request $request){
 
         $product = gem::find($request->id);
-        Cart::instance('cart')->add($product->id,$product->nom,1 ,$product->prix)->associate('App\Models\gem');
+        Cart::instance('cart')->add($product->id,$product->name,1 ,$product->prix)->associate('App\Models\gem');
 
         return redirect()->back()->with('success','Item successfully added to your cart!');
     }

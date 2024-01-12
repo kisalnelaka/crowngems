@@ -39,12 +39,12 @@ class GemSeeder extends Seeder {
                     $photo2_gem = 'gem_default2.jpg';}
 
             //Seeding slug using name and type:
-            $nom = $faker->words(3,true);
-            $slug = Str::slug("$nom-$type_gem");
+            $name = $faker->words(3,true);
+            $slug = Str::slug("$name-$type_gem");
 
             
             gem::create([
-                'nom' => $nom,
+                'name' => $name,
                 'description' => $faker->sentence,
                 'type' => $type_gem,
                 'photo1' => $photo1_gem,

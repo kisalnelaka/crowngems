@@ -12,7 +12,7 @@
 
         <thead class="text-lightBlue">
           <tr class="border-b-rose-700">
-            <th>Nom</th>
+            <th>Name</th>
             <th>Email</th>
             <th class="text-center">Action</th>
           </tr>
