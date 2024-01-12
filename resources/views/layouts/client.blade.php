@@ -60,9 +60,9 @@
         </div>
         {{-- hover:translate-x-1  transition-transform duration-300 ease-in-out --}}
         @auth
-        <a href="{{ route('dashboard')}}"><i class="ri-user-fill text-2xl px-4 border-x border-second "></i></a>
+        <a href="{{ route('dashboard')}}"><i class="ri-user-fill text-2xl px-4 "></i></a>
         @else
-        <a href="{{ route('login') }}"><i class="ri-user-fill text-2xl px-4 border-x border-second "></i></a>
+        <a href="{{ route('login') }}"><i class="ri-user-fill text-2xl px-4 "></i></a>
         @endauth
 
 
@@ -78,12 +78,12 @@
             <li><a href="/dashboard" class="text-base bg-emerald-200">Client area</a></li>
             @else
             <li><a href="{{ route('login') }}" class="text-base" >Login</a></li>
-            <li><a href="{{ route('register') }}" class="text-base" >Register</a></li>
+            {{-- <li><a href="{{ route('register') }}" class="text-base" >Register</a></li> --}}
             @endauth
           </ul>
         </div>
 
-        <a href="{{ route('register') }}" class=" pl-5 pr-3 max-md:hidden">Register</a>
+        {{-- <a href="{{ route('register') }}" class=" pl-5 pr-3 max-md:hidden">Register</a> --}}
 
       </div>
 
