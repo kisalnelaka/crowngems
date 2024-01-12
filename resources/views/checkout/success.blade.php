@@ -8,19 +8,18 @@
 
         {{-- Remerciements --}}
         <div class="flex flex-col text-center gap-8 p-8 pb-0">
-            <h3 class="text-3xl font-semibold font-playfair">Thank you for your purchase,  {{ $client->name }}! </h3>
-            <p class="font-dmsans">
-                We would like to sincerely thank you for your recent purchase on our site. It is a pleasure to count you among our customers.</p>
+            <h3 class="text-3xl font-semibold font-playfair">Merci pour votre achat,  {{ $client->name }}! </h3>
+            <p class="font-dmsans">Nous tenons à vous remercier sincèrement pour votre récent achat sur notre site. C'est un plaisir de vous compter parmi nos clients.</p>
         </div>
     
         <div class="grid grid-cols-3 max-md:grid-cols-1 justify-center place-items-center gap-8 ">
     
             <div class="font-dmsans p-4 md:px-8 flex flex-col gap-4 max-md:text-center md:col-span-2">
-                <p >Your order has been handled with care, and we are preparing it for shipping. As soon as your order is ready to ship, we will send you a confirmation email to this email: <b class="text-softGreen underline">{{$client->email}}</b> avec tous les détails d'expédition.</p>
-                <p class="">If you have any questions or concerns, please do not hesitate to contact us. We are here to help you!</p>
-                <p class="">Thank you again for your trust.</p>
-                <p class="mt-8 text-secondDarker font-playfair">Sincerely,</p>
-                <p class="italic text-secondDarker font-playfair">CrownGems</p>
+                <p >Votre commande a été traitée avec soin, et nous sommes en train de la préparer pour l'expédition. Dès que votre commande sera prête à partir,  nous vous enverrons un email de confirmation  à cette adresse : <b class="text-softGreen underline">{{$client->email}}</b> avec tous les détails d'expédition.</p>
+                <p class="">Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter. Nous sommes là pour vous aider!</p>
+                <p class="">Merci encore pour votre confiance.</p>
+                <p class="mt-8 text-secondDarker font-playfair">Cordialement,</p>
+                <p class="italic text-secondDarker font-playfair">GemVogue</p>
     
             </div>
 
@@ -47,8 +46,8 @@
         </div> --}}
 
         <div class="flex flex-row max-sm:flex-col max-sm:text-center max-sm:gap-4 max-sm:w-full justify-between p-8">
-            <a href="{{ route('home') }}" class=><button class="py-2 px-4 bg-second text-white font-dmsans rounded shadow-lg ">Back to Home</button></a>
-            <a href="{{ route('gemstones') }}" class=><button class="py-2 px-4 bg-rose-500 text-white font-dmsans rounded shadow-lg ">Shop More!</button></a>
+            <a href="{{ route('home') }}" class=><button class="py-2 px-4 bg-second text-white font-dmsans rounded shadow-lg ">Rediriger vers l'home</button></a>
+            <a href="{{ route('gemstones') }}" class=><button class="py-2 px-4 bg-rose-500 text-white font-dmsans rounded shadow-lg ">Continuer vos achats</button></a>
         </div>
 
 

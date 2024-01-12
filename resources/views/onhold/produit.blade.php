@@ -51,11 +51,11 @@
                     <p class="mt-4 text-gray-700 max-sm:text-center max-sm:px-2">{{ $gem->description }}</p>
                     
                     <div class="mt-4">
-                        <p class="text-xl font-semibold text-gray-800 max-sm:text-base font-playfair">Product Details</p>
+                        <p class="text-xl font-semibold text-gray-800 max-sm:text-base font-playfair">Détails du product</p>
                         <ul class="list-disc pl-6 mt-2">
                             <li>Type : {{ $gem->type }}</li>
                             <li>Prix : {{ $gem->prix }} $</li>
-                            <li>Origin : {{ $gem->type_metal }}</li>
+                            <li>Type de métal : {{ $gem->type_metal }}</li>
                         </ul>
                     </div>
 
@@ -73,7 +73,7 @@
 
                         <!-- Wishlist -->
                         <button class="bg-neutral text-white font-semibold px-4 py-3 rounded-md max-sm:m-1 ">
-                            Add to wish list
+                            Ajouter à la liste de souhaits
                         </button>
                         
                     </div>
