@@ -9,7 +9,7 @@
     <div class="hero-overlay bg-yellow-800 bg-opacity-70"></div>
     <div class="hero-content text-center text-black ">
       <div class="max-w-md">
-        <h1 class="mb-4 text-xl md:text-2xl font-bold ">Notre sélection d'anneaux</h1>
+        <h1 class="mb-4 text-xl md:text-2xl font-bold ">Our selection of Garnets</h1>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
     <div class="hero-overlay bg-amber-800 bg-opacity-70"></div>
     <div class="hero-content text-center text-white">
       <div class="max-w-md">
-        <h1 class="mb-4 text-xl md:text-2xl font-bold ">Notre sélection de colliers</h1>
+        <h1 class="mb-4 text-xl md:text-2xl font-bold ">Our Collection of Opels</h1>
       </div>
     </div>
   </div>
@@ -61,7 +61,7 @@
           <p class="text-sm "> {{ $gem->type_metal }}</p> 
           <p class="text-sm pb-1.5" >{{ $gem->prix }} $</p>
         </div>
-      </a>
+      </a>    
       @endif
     @endforeach
   </div>
@@ -71,7 +71,7 @@
     <div class="hero-overlay bg-yellow-800 bg-opacity-70"></div>
     <div class="hero-content text-center text-white">
       <div class="max-w-md">
-        <h1 class="mb-4 text-xl md:text-2xl font-bold ">Notre sélection de bracelets</h1>
+        <h1 class="mb-4 text-xl md:text-2xl font-bold ">Our selection of sapphires</h1>
       </div>
     </div>
   </div>
