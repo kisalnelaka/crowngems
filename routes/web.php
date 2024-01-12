@@ -2,14 +2,14 @@
 
 use App\Http\Controllers\PanierController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\BijouController;
+use App\Http\Controllers\GemController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 //Admin
 use App\Http\Controllers\Admin\AdminUserController;
-use App\Http\Controllers\Admin\AdminBijouController;
+use App\Http\Controllers\Admin\AdminGemController;
 
 
 /*
@@ -31,10 +31,10 @@ Route::get('/welcome', function () { return view('welcome');     })
 Route::get('/about-us', function () { return view('about-us');     })
     ->name('about-us');
 
-//Display de bijoux
+//Display de gems
 Route::get('/', function(){ return view('accueil'); })->name('accueil');
-Route::get('/gemstones', [BijouController::class, 'index'])->name('gemstones');
-Route::get('/bijoux/{slug}', [BijouController::class,'show'])->name('bijou');
+Route::get('/gemstones', [GemController::class, 'index'])->name('gemstones');
+Route::get('/gems/{slug}', [GemController::class,'show'])->name('gem');
 
 //Newsletter
 // Route::post('/newsletter', [NewsletterController::class, 'newsletter_email'])->name('Newsletter');
@@ -76,12 +76,12 @@ Route::get('/dashboard', [Controller::class,'dashboard'])->middleware(['auth', '
 //Administration
 Route::group(['prefix'=>'admin','middleware'=>'admin.check'],function(){
     Route::resource('utilisateurs', AdminUserController::class);
-    Route::resource('bijoux', AdminBijouController::class);
+    Route::resource('gems', AdminGemController::class);
 });
 
 Route::prefix('admin')->group(  function(){
     Route::get('utilisateurs',[ AdminUserController::class,'index'])->name('admin.utilisateurs.index');
-    Route::get('bijoux',[ AdminBijouController::class,'index'])->name('admin.bijoux.index');
+    Route::get('gems',[ AdminGemController::class,'index'])->name('admin.gems.index');
 });
 
 require __DIR__.'/auth.php';

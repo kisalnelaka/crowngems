@@ -3,7 +3,7 @@
 @section('content')
 <div class="w-full bg-third">
 
-  <div class="h-72 max-sm:h-60 max-w-7xl mx-auto bg-cover bg-center" style="background-image:url({{asset('images/composants/bijoux-panier.jpg')}});">
+  <div class="h-72 max-sm:h-60 max-w-7xl mx-auto bg-cover bg-center" style="background-image:url({{asset('images/composants/gems-panier.jpg')}});">
     <div class="h-full w-full bg-gray-950 bg-opacity-60">
       <div class="flex items-center justify-center h-full pt-36">
         <p class="text-3xl text-white font-playfair font-semibold">Your Cart</p>
@@ -119,7 +119,7 @@
           style="background-image:url({{ asset('images/produits/ring2.jpg') }})">
 
             <div class="w-full h-full bg-stone-800 bg-opacity-40 hover:bg-opacity-10 transition">
-              <a href="{{ route('shopCategoryFilter',['typeBijou' =>'Anneau'])}}" class="h-full w-full absolute"></a></div>
+              <a href="{{ route('shopCategoryFilter',['typeGem' =>'Anneau'])}}" class="h-full w-full absolute"></a></div>
             <p class="absolute top-3/4 w-full text-center text-white">Sapphires</p>
         </div>
 
@@ -128,7 +128,7 @@
           style="background-image:url({{ asset('images/produits/necklace2.jpg') }})">
 
             <div class="w-full h-full bg-stone-800 bg-opacity-40 hover:bg-opacity-10 transition">
-              <a href="{{ route('shopCategoryFilter',['typeBijou' =>'Collier'])}}"  class="h-full w-full absolute"></a></div>
+              <a href="{{ route('shopCategoryFilter',['typeGem' =>'Collier'])}}"  class="h-full w-full absolute"></a></div>
             <p class="absolute top-3/4 w-full text-center text-white">Opels</p>
         </div>
 
@@ -137,7 +137,7 @@
         style="background-image:url({{ asset('images/produits/bracelet2.jpg') }})">
 
           <div class="w-full h-full bg-stone-800 bg-opacity-40 hover:bg-opacity-10 transition">
-            <a href="{{ route('shopCategoryFilter',['typeBijou' =>'Bracelet'])}}" class="h-full w-full absolute"></a></div>
+            <a href="{{ route('shopCategoryFilter',['typeGem' =>'Bracelet'])}}" class="h-full w-full absolute"></a></div>
           <p class="absolute top-3/4 w-full text-center text-white">Garnets</p>
         </div>
 
@@ -146,7 +146,7 @@
         style="background-image:url({{ asset('images/produits/boucles2.jpg') }})">
 
           <div class="w-full h-full bg-stone-800 bg-opacity-40 hover:bg-opacity-10 transition">
-            <a href="{{ route('shopCategoryFilter',['typeBijou' =>'Boucles oreilles'])}}" class="h-full w-full absolute"></a></div>
+            <a href="{{ route('shopCategoryFilter',['typeGem' =>'Boucles oreilles'])}}" class="h-full w-full absolute"></a></div>
           <p class="absolute top-3/4 w-full text-center text-white">Cat's Eyes</p>
         </div>
 

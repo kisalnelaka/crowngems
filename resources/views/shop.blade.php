@@ -97,7 +97,7 @@
       <div class="flex
        {{-- max-sm:flex-col max-sm:gap-2 --}}
         items-center p-3">
-        <p class=" font-bold text-fourth">{{ $bijoux->total()}} Item(s) Found</p>
+        <p class=" font-bold text-fourth">{{ $gems->total()}} Item(s) Found</p>
 
         {{-- <form action="shopOrder" method="post" >
           <label for="order" class="text-sm">Trier par :</label>
@@ -113,17 +113,17 @@
       {{-- Produits --}}
       <div class="grid lg:grid-cols-4 md:grid-cols-3 max-md:grid-cols-2 items-center gap-2">
 
-        @foreach ($bijoux as $bijou)
+        @foreach ($gems as $gem)
     
-          <a href="{{ route('bijou',[ 'slug' => $bijou->slug]) }}">
+          <a href="{{ route('gem',[ 'slug' => $gem->slug]) }}">
 
             <div class="flex flex-col place-items-center relative shadow-lg rounded-2xl">
-              <img src="{{ asset('images/produits/'. $bijou->photo1 )}}" loading="lazy" alt="img bijou database" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl absolute hover:opacity-0 transition-all">
-              <img src="{{ asset('images/produits/'. $bijou->photo2 )}}" loading="lazy" alt="img bijou hover" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl">
+              <img src="{{ asset('images/produits/'. $gem->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl absolute hover:opacity-0 transition-all">
+              <img src="{{ asset('images/produits/'. $gem->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center rounded-t-xl">
               <div class="flex flex-col sm:text-sm max-sm:text-xs text-center border-t border-second w-full p-1">
-                <p class="truncate font-semibold">{{ $bijou->nom }}</p>
-                <p class="text-xs"> {{ $bijou->type_metal }}</p> 
-                <p class="font-semibold text-fourth" >{{ $bijou->prix }} $</p>
+                <p class="truncate font-semibold">{{ $gem->nom }}</p>
+                <p class="text-xs"> {{ $gem->type_metal }}</p> 
+                <p class="font-semibold text-fourth" >{{ $gem->prix }} $</p>
               </div>
             </div>
 
@@ -132,7 +132,7 @@
       </div>
 
       <div class="mx-auto justify-center md:p-4 max-md:p-2">
-        {{$bijoux->withQueryString()->links()}}
+        {{$gems->withQueryString()->links()}}
       </div>
 
     </div>
@@ -147,12 +147,12 @@
 
   {{-- <div class="grid grid-cols-2 max-md:grid-cols-1 justify-center gap-4 max-w-5xl p-4">
 
-    @foreach($bijoux as $bijou)
+    @foreach($gems as $gem)
       <div class="font-dmsans text-sm p-2 border border-second rounded">
-        <p> {{ $bijou->nom }} / {{ $bijou->id }}</p>
-        <p class="font-semibold"> {{ $bijou->type }} </p>
-        <p> {{ $bijou->type_metal }} </p>
-        <p> {{ $bijou->prix }} $</p>
+        <p> {{ $gem->nom }} / {{ $gem->id }}</p>
+        <p class="font-semibold"> {{ $gem->type }} </p>
+        <p> {{ $gem->type_metal }} </p>
+        <p> {{ $gem->prix }} $</p>
       </div>
     @endforeach
   </div> --}}

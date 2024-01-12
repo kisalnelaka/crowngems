@@ -4,7 +4,7 @@
 
   <div>
 
-    <p class="text-lg max-md:text-md text-cyan-900 p-3 mt-2">Liste des bijoux</p>
+    <p class="text-lg max-md:text-md text-cyan-900 p-3 mt-2">Liste des gems</p>
     
     {{-- Recherche --}}
 
@@ -25,15 +25,15 @@
         </thead>
         <tbody >
 
-          @foreach($bijoux as $bijou)
+          @foreach($gems as $gem)
             <tr class="border-b-slate-300 hover:bg-sky-100">
-              <td class="max-md:hidden"><div class="avatar"><div class="mask h-8 w-8"><img src="{{ asset('images/produits/'.$bijou->photo1) }}" alt="bijou image"/></div></div></td>
-              <td> {{ $bijou->nom }} </td>
-              <td> {{ $bijou->prix }} $</td>
-              <td> {{ $bijou->type }} </td>
-              <td> {{ $bijou->qte_stock}} </td>
-              <td class="max-md:hidden text-center"> {{ $bijou->collection}} </td>
-              <td class="max-md:hidden text-center"> {{ $bijou->type_metal}} </td>
+              <td class="max-md:hidden"><div class="avatar"><div class="mask h-8 w-8"><img src="{{ asset('images/produits/'.$gem->photo1) }}" alt="gem image"/></div></div></td>
+              <td> {{ $gem->nom }} </td>
+              <td> {{ $gem->prix }} $</td>
+              <td> {{ $gem->type }} </td>
+              <td> {{ $gem->qte_stock}} </td>
+              <td class="max-md:hidden text-center"> {{ $gem->collection}} </td>
+              <td class="max-md:hidden text-center"> {{ $gem->type_metal}} </td>
               <td class="text-center"><a href=""><i class="ri-settings-2-line text-cyan-900 text-2xl"></i></a></td>
             </tr>
           @endforeach
@@ -43,7 +43,7 @@
     </div>
 
     <div class="mt-4 p-4">
-      {{$bijoux->links()}}
+      {{$gems->links()}}
     </div>
 
   </div>

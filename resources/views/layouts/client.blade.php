@@ -115,9 +115,9 @@
       <div class="flex flex-col font-semibold text-fourth">
         <p class="text-fourth text-xl py-2 font-playfair">Shop</p>
         <div class="flex flex-col justify-evenly gap-2 text-sm p-2 text-fourth">
-            <a href="{{ route('shopCategoryFilter',['typeBijou' =>'boucles oreilles'])}}">Opels</a>
-            <a href="{{ route('shopCategoryFilter',['typeBijou' =>'Anneau'])}}">Cat's Eye</a>
-            <a href="{{ route('shopCategoryFilter',['typeBijou' =>'Bracelet'])}}">Sapphires</a>
+            <a href="{{ route('shopCategoryFilter',['typeGem' =>'boucles oreilles'])}}">Opels</a>
+            <a href="{{ route('shopCategoryFilter',['typeGem' =>'Anneau'])}}">Cat's Eye</a>
+            <a href="{{ route('shopCategoryFilter',['typeGem' =>'Bracelet'])}}">Sapphires</a>
         </div>
       </div>
     

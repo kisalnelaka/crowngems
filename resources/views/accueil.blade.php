@@ -9,7 +9,7 @@
           <p class="md:text-4xl max-md:text-2xl font-semibold py-4">Your one-stop destination for unique and exquisite Gemstones.</p>
           <p class=" text-md py-0 font-lora text-first">
             Here we offer different types of gemstones! We have something for everyone.</p>
-          <a href="#" class="bg-fourth text-first text-lg text-center py-3 px-6 w-fit rounded-l-full my-4 font-semibold hover:bg-fourthDarker hover:text-white transition">
+          <a href="{{route('gemstones')}}" class="bg-fourth text-first text-lg text-center py-3 px-6 w-fit rounded-l-full my-4 font-semibold hover:bg-fourthDarker hover:text-white transition">
             Discover the collection</a>
         </div>
       
@@ -29,19 +29,19 @@
         
         <div class="relative aspect-square max-md:max-w-xs mx-auto">
           <img class="object-cover w-full h-full" src="{{ asset('images/composants/landing-earrings.png')}}" alt="landing earrings" srcset="">
-          <a href="{{ route('shopCategoryFilter',['typeBijou' =>'boucles oreilles'])}}" 
+          <a href="{{ route('shopCategoryFilter',['typeGem' =>'boucles oreilles'])}}" 
             class="absolute top-3/4 left-0 bg-third hover:bg-fourth transition text-fourth hover:text-white text-center p-2 w-48 rounded-r-full shadow-xl my-4">Topaz</a>
         </div>
         
         <div class="relative aspect-square max-md:max-w-xs mx-auto">
           <img class="object-cover w-full h-full" src="{{ asset('images/composants/landing-necklace.png')}}" alt="landing necklace" srcset="">
-          <a href="{{ route('shopCategoryFilter',['typeBijou' =>'Collier'])}}" 
+          <a href="{{ route('shopCategoryFilter',['typeGem' =>'Collier'])}}" 
             class="absolute top-3/4 left-0 bg-third hover:bg-fourth transition text-fourth hover:text-white text-center p-2 w-48 rounded-r-full shadow-xl my-4">Cat's Eye</a>
         </div>
         
         <div class="relative aspect-square max-md:max-w-xs mx-auto">
           <img class="object-cover w-full h-full" src="{{ asset('images/composants/landing-ring.png')}}" alt="landing ring" srcset="">
-          <a href="{{ route('shopCategoryFilter',['typeBijou' =>'Anneau'])}}" 
+          <a href="{{ route('shopCategoryFilter',['typeGem' =>'Anneau'])}}" 
             class="absolute top-3/4 left-0 bg-third hover:bg-fourth transition text-fourth hover:text-white text-center p-2 w-48 rounded-r-full shadow-xl my-4">Opels</a>
         </div>
       </div>
@@ -94,7 +94,7 @@
       <div class="w-full h-full relative">
 
         <div class="absolute left-10 md:top-1/2 md:right-2/3 p-4  max-md:top-3/4 max-md:left-1/2">
-          <p class="text-3xl text-whiteBeige font-serif max-md:text-xl">Des bijouteries exquices près de vous</p>
+          <p class="text-3xl text-whiteBeige font-serif max-md:text-xl">Des gemteries exquices près de vous</p>
         </div>
 
         <div class="w-full h-full bg-slate-800 bg-opacity-30"></div>

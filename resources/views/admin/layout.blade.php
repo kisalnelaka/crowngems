@@ -34,7 +34,7 @@
           <i class="ri-account-circle-line mr-3 text-xl"></i>
           <span class="">Users</span></a></li>
       <li>
-        <a href="{{route('admin.bijoux.index')}}" class="flex items-center py-2 px-4 text-whiteShade focus:bg-rose-700 focus:text-white rounded">
+        <a href="{{route('admin.gems.index')}}" class="flex items-center py-2 px-4 text-whiteShade focus:bg-rose-700 focus:text-white rounded">
           <i class="ri-vip-diamond-line mr-3 text-xl"></i>
           <span class="">Products</span></a></li>
       <li>
@@ -54,7 +54,7 @@
           <label tabindex="0" class="btn m-1 bg-neutral-100 hover:bg-neutral-300 border-neutral-100 hover:border-neutral-500"><i class="ri-menu-fill text-lg"></i></label>
           <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 bg-darkShade text-whiteShade">
             <li><a href="{{ route('admin.utilisateurs.index')}}"><i class="ri-account-circle-line mr-3 text-2xl"></i>Users</a></li>
-            <li><a href="{{ route('admin.bijoux.index')}}"><i class="ri-vip-diamond-line mr-3 text-2xl"></i>Products</a></li>
+            <li><a href="{{ route('admin.gems.index')}}"><i class="ri-vip-diamond-line mr-3 text-2xl"></i>Products</a></li>
             <li><a><i class="ri-shopping-cart-2-line mr-3 text-2xl"></i>Purchases</a></li>
           </ul>
         </div>

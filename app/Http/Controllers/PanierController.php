@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request; 
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Log;
-use App\Models\Bijou;
+use App\Models\gem;
 use App\Models\Order;
 use Stripe\Stripe;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -32,8 +32,8 @@ class PanierController extends Controller{
 
     public function addToCart(Request $request){
 
-        $product = Bijou::find($request->id);
-        Cart::instance('cart')->add($product->id,$product->nom,1 ,$product->prix)->associate('App\Models\Bijou');
+        $product = gem::find($request->id);
+        Cart::instance('cart')->add($product->id,$product->nom,1 ,$product->prix)->associate('App\Models\gem');
 
         return redirect()->back()->with('success','Item successfully added to your cart!');
     }

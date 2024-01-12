@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(BijouSeeder::class);
+        $this->call(GemSeeder::class);
 
         \App\Models\User::factory(30)->create();
 

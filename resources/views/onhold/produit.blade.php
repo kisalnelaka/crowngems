@@ -27,35 +27,35 @@
                 <div class="lg:w-2/3">
                     <!-- for meduim / big format -->
                     <div class="grid md:grid-cols-2 gap-4 max-sm:hidden ">
-                        <div><img src="{{ asset('images/produits/' . $bijou->photo1) }}" alt="Photo 1" class="w-full aspect-square object-cover shadow-lg"></div>
-                        <div><img src="{{ asset('images/produits/' . $bijou->photo2) }}" alt="Photo 2" class="w-full aspect-square object-cover shadow-lg"></div>
+                        <div><img src="{{ asset('images/produits/' . $gem->photo1) }}" alt="Photo 1" class="w-full aspect-square object-cover shadow-lg"></div>
+                        <div><img src="{{ asset('images/produits/' . $gem->photo2) }}" alt="Photo 2" class="w-full aspect-square object-cover shadow-lg"></div>
                     </div>
 
                     <!-- for mobile format -->
                     <div class="carousel max-w-sm aspect-square object-cover md:hidden shadow-lg">
                         <div id="slide1" class="carousel-item relative w-full">
-                        <img src="{{ asset('images/produits/' . $bijou->photo1) }}" class="w-full" />
+                        <img src="{{ asset('images/produits/' . $gem->photo1) }}" class="w-full" />
                         <div class="absolute flex justify-between transform -translate-y-1/2 right-5 top-1/2">
                             <a href="#slide2" class="btn btn-circle">❯</a>
                         </div>
                         </div> 
                         <div id="slide2" class="carousel-item relative w-full">
-                        <img src="{{ asset('images/produits/' . $bijou->photo2) }}" class="w-full" />
+                        <img src="{{ asset('images/produits/' . $gem->photo2) }}" class="w-full" />
                         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 top-1/2">
                             <a href="#slide1" class="btn btn-circle">❮</a> 
                         </div>
                         </div> 
                     </div>
 
-                    <h1 class="text-3xl font-semibold m-4 max-sm:text-xl max-sm:text-center">{{ $bijou->nom }}</h1>
-                    <p class="mt-4 text-gray-700 max-sm:text-center max-sm:px-2">{{ $bijou->description }}</p>
+                    <h1 class="text-3xl font-semibold m-4 max-sm:text-xl max-sm:text-center">{{ $gem->nom }}</h1>
+                    <p class="mt-4 text-gray-700 max-sm:text-center max-sm:px-2">{{ $gem->description }}</p>
                     
                     <div class="mt-4">
                         <p class="text-xl font-semibold text-gray-800 max-sm:text-base font-playfair">Détails du produit</p>
                         <ul class="list-disc pl-6 mt-2">
-                            <li>Type : {{ $bijou->type }}</li>
-                            <li>Prix : {{ $bijou->prix }} $</li>
-                            <li>Type de métal : {{ $bijou->type_metal }}</li>
+                            <li>Type : {{ $gem->type }}</li>
+                            <li>Prix : {{ $gem->prix }} $</li>
+                            <li>Type de métal : {{ $gem->type_metal }}</li>
                         </ul>
                     </div>
 
@@ -65,7 +65,7 @@
                         <!-- Panier -->
                         <form id="ajouterPanier" action="{{ route('ajouterProduitPanier') }}" method="post">
                             @csrf
-                            <input type="hidden" name="id" value="{{ $bijou->id }}">
+                            <input type="hidden" name="id" value="{{ $gem->id }}">
                             <input type="hidden" name="quantity" id="qty" value="1">
                             <input type="submit" value="Ajouter au panier" class="bg-secondary text-white font-semibold rounded-md max-sm:w-full px-3 py-3">
                         </form>
@@ -82,17 +82,17 @@
                 <!-- Section des produits similaires -->
                 <div class="lg:w-1/3 grid lg:grid-cols-2 max-lg:grid-cols-4 items-center gap-2 p-3">
 
-                    @foreach ($bijouxSimilaires as $bijouSimilaire)
+                    @foreach ($gemsSimilaires as $gemSimilaire)
                 
-                    <a href="{{ route('bijou',[ 'slug' => $bijouSimilaire->slug]) }}">
+                    <a href="{{ route('gem',[ 'slug' => $gemSimilaire->slug]) }}">
             
                         <div class="flex flex-col place-items-center border border-second relative">
-                        <img src="{{ asset('images/produits/'. $bijouSimilaire->photo1 )}}" loading="lazy" alt="img bijou database" class="w-full h-auto aspect-square object-cover object-center absolute hover:opacity-0 transition-all">
-                        <img src="{{ asset('images/produits/'. $bijouSimilaire->photo2 )}}" loading="lazy" alt="img bijou hover" class="w-full h-auto aspect-square object-cover object-center">
+                        <img src="{{ asset('images/produits/'. $gemSimilaire->photo1 )}}" loading="lazy" alt="img gem database" class="w-full h-auto aspect-square object-cover object-center absolute hover:opacity-0 transition-all">
+                        <img src="{{ asset('images/produits/'. $gemSimilaire->photo2 )}}" loading="lazy" alt="img gem hover" class="w-full h-auto aspect-square object-cover object-center">
                         <div class="flex flex-col sm:text-sm max-sm:text-xs text-center border-t border-second w-full p-1">
-                            <p class="truncate font-semibold">{{ $bijouSimilaire->nom }}</p>
-                            <p class="text-xs"> {{ $bijouSimilaire->type_metal }}</p> 
-                            <p class="font-semibold text-amber-800" >{{ $bijouSimilaire->prix }} $</p>
+                            <p class="truncate font-semibold">{{ $gemSimilaire->nom }}</p>
+                            <p class="text-xs"> {{ $gemSimilaire->type_metal }}</p> 
+                            <p class="font-semibold text-amber-800" >{{ $gemSimilaire->prix }} $</p>
                         </div>
                         </div>
             

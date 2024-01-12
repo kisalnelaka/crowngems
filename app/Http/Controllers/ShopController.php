@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Bijou;
+use App\Models\gem;
 
 class ShopController extends Controller
 {
@@ -12,13 +12,13 @@ class ShopController extends Controller
         //Catégorie
         public function sortCategory(Request $request){
                 
-            if($request ->has('typeBijou')){
-                $typeBijou = $request->typeBijou;
+            if($request ->has('typeGem')){
+                $typeGem = $request->typeGem;
 
-                $bijoux = Bijou::where('type', $typeBijou)
+                $gems = gem::where('type', $typeGem)
                 ->paginate(24);
 
-                return view('shop',compact('bijoux','typeBijou'));
+                return view('shop',compact('gems','typeGem'));
             }
 
             return redirect()->back();
@@ -31,27 +31,27 @@ class ShopController extends Controller
 
                 switch ($prixRange) {
                     case '0-500':
-                        $bijoux = Bijou::where('prix', '<=', 500)->where('prix', '>=', 0)->orderBy('prix','asc');
+                        $gems = gem::where('prix', '<=', 500)->where('prix', '>=', 0)->orderBy('prix','asc');
                         break;
                     case '500-1000':
-                        $bijoux = Bijou::where('prix', '<=', 1000)->where('prix', '>=', 500)->orderBy('prix','asc');
+                        $gems = gem::where('prix', '<=', 1000)->where('prix', '>=', 500)->orderBy('prix','asc');
                         break;
                     case '1000-1500':
-                        $bijoux = Bijou::where('prix', '<=', 1500)->where('prix', '>=', 1000)->orderBy('prix','asc');
+                        $gems = gem::where('prix', '<=', 1500)->where('prix', '>=', 1000)->orderBy('prix','asc');
                         break;
                     case '1500-2000':
-                        $bijoux = Bijou::where('prix', '<=', 2000)->where('prix', '>=', 1500)->orderBy('prix','asc');
+                        $gems = gem::where('prix', '<=', 2000)->where('prix', '>=', 1500)->orderBy('prix','asc');
                         break;
                     case '2000+':
-                        $bijoux = Bijou::where('prix', '>=', 2000)->orderBy('prix','asc');
+                        $gems = gem::where('prix', '>=', 2000)->orderBy('prix','asc');
                         break;
                     default:
                         return redirect()->back();
                 }
 
-                $bijoux = $bijoux->paginate(12);
+                $gems = $gems->paginate(12);
         
-                return view('shop', compact('bijoux', 'prixRange'));
+                return view('shop', compact('gems', 'prixRange'));
             }
             return redirect()->back();
         }
@@ -63,23 +63,23 @@ class ShopController extends Controller
             $prixMax = $request->input('prixMax');
         
             if ($prixMin && $prixMax) {
-                $bijoux = Bijou::where('prix', '>=', $prixMin)
+                $gems = gem::where('prix', '>=', $prixMin)
                                ->where('prix', '<=', $prixMax)
                                ->orderBy('prix','asc')
                                ->paginate(12);
-                return view('shop', compact('bijoux', 'prixMin', 'prixMax'));
+                return view('shop', compact('gems', 'prixMin', 'prixMax'));
                 
             } elseif ($prixMin) {
-                $bijoux = Bijou::where('prix', '>=', $prixMin)
+                $gems = gem::where('prix', '>=', $prixMin)
                                 ->orderBy('prix','asc')
                                ->paginate(12);
-                return view('shop', compact('bijoux', 'prixMin'));
+                return view('shop', compact('gems', 'prixMin'));
                 
             } elseif ($prixMax) {
-                $bijoux = Bijou::where('prix', '<=', $prixMax)
+                $gems = gem::where('prix', '<=', $prixMax)
                                 ->orderBy('prix','asc')
                                 ->paginate(12);
-                return view('shop', compact('bijoux', 'prixMax'));
+                return view('shop', compact('gems', 'prixMax'));
                 
             }
         

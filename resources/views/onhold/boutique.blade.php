@@ -15,20 +15,20 @@
   </div>
 
   <div class="grid gap-2 max-sm:gap-0 p-6 max-sm:p-2 place-items-center max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-    @foreach ($bijoux as $bijou)
+    @foreach ($gems as $gem)
 
-      @if ( $bijou->type =='Anneau')
-      <a href="{{ route('bijou',[ 'slug' => $bijou->slug]) }}">
+      @if ( $gem->type =='Anneau')
+      <a href="{{ route('gem',[ 'slug' => $gem->slug]) }}">
         <div class="card w-50 bg-base-100 shadow-xl flex flex-col items-center m-1">
           <figure class="px-2 pt-2">
-            <img src="{{ asset('images/produits/'. $bijou->photo1 )}}" loading="lazy"
-            alt="img bijou database"
+            <img src="{{ asset('images/produits/'. $gem->photo1 )}}" loading="lazy"
+            alt="img gem database"
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>
 
-          <h2 class="font-semibold text-sm text-center py-0.5 mx-1">{{ $bijou->nom }}</h2>
-          <p class="text-sm "> {{ $bijou->type_metal }}</p> 
-          <p class="text-sm pb-1.5" >{{ $bijou->prix }} $</p>
+          <h2 class="font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->nom }}</h2>
+          <p class="text-sm "> {{ $gem->type_metal }}</p> 
+          <p class="text-sm pb-1.5" >{{ $gem->prix }} $</p>
         </div>
       </a>
       @endif
@@ -46,20 +46,20 @@
   </div>
 
   <div class="grid gap-2 max-sm:gap-0 p-6 max-sm:p-2  place-items-center  max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-    @foreach ($bijoux as $bijou)
-      @if ($bijou->type =='Collier')
+    @foreach ($gems as $gem)
+      @if ($gem->type =='Collier')
 
-      <a href="{{ route('bijou',[ 'slug' => $bijou->slug]) }}">
+      <a href="{{ route('gem',[ 'slug' => $gem->slug]) }}">
         <div class="card w-50 bg-base-100 shadow-xl flex flex-col items-center m-1">
           <figure class="px-2 pt-2">
-            <img src="{{ asset('images/produits/'. $bijou->photo1 )}}" loading="lazy"
-            alt="img bijou database"
+            <img src="{{ asset('images/produits/'. $gem->photo1 )}}" loading="lazy"
+            alt="img gem database"
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>
 
-          <h2 class="font-semibold text-sm text-center py-0.5 mx-1">{{ $bijou->nom }}</h2>
-          <p class="text-sm "> {{ $bijou->type_metal }}</p> 
-          <p class="text-sm pb-1.5" >{{ $bijou->prix }} $</p>
+          <h2 class="font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->nom }}</h2>
+          <p class="text-sm "> {{ $gem->type_metal }}</p> 
+          <p class="text-sm pb-1.5" >{{ $gem->prix }} $</p>
         </div>
       </a>
       @endif
@@ -77,20 +77,20 @@
   </div>
 
   <div class="grid gap-2 max-sm:gap-0 p-6 max-sm:p-2  place-items-center  max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-    @foreach ($bijoux as $bijou)
-      @if ($bijou->type =='Bracelet')
+    @foreach ($gems as $gem)
+      @if ($gem->type =='Bracelet')
 
-      <a href="{{ route('bijou',[ 'slug' => $bijou->slug]) }}">
+      <a href="{{ route('gem',[ 'slug' => $gem->slug]) }}">
         <div class="card w-50 bg-base-100 shadow-xl flex flex-col items-center m-1">
           <figure class="px-2 pt-2">
-            <img src="{{ asset('images/produits/'. $bijou->photo1 )}}" loading="lazy"
-            alt="img bijou database"
+            <img src="{{ asset('images/produits/'. $gem->photo1 )}}" loading="lazy"
+            alt="img gem database"
             class="rounded-lg h-48 w-48 max-sm:h-36 max-sm:w-36 object-cover">
           </figure>
 
-          <h2 class=" font-semibold text-sm text-center py-0.5 mx-1">{{ $bijou->nom }}</h2>
-          <p class="text-sm "> {{ $bijou->type_metal }}</p> 
-          <p class="text-sm pb-1.5" >{{ $bijou->prix }} $</p>
+          <h2 class=" font-semibold text-sm text-center py-0.5 mx-1">{{ $gem->nom }}</h2>
+          <p class="text-sm "> {{ $gem->type_metal }}</p> 
+          <p class="text-sm pb-1.5" >{{ $gem->prix }} $</p>
         </div>
       </a>
       @endif

@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Bijou;
+use App\Models\gem;
 use Illuminate\Http\Request;
 
-class AdminBijouController extends Controller
+class AdminGemController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $bijoux=Bijou::paginate(12);
-        return view('admin.bijoux.index',compact('bijoux'));
+        $gems=gem::paginate(12);
+        return view('admin.gems.index',compact('gems'));
     }
 
     /**
@@ -36,7 +36,7 @@ class AdminBijouController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Bijou $bijou)
+    public function show(gem $gem)
     {
         //
     }
@@ -44,7 +44,7 @@ class AdminBijouController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Bijou $bijou)
+    public function edit(gem $gem)
     {
         //
     }
@@ -52,7 +52,7 @@ class AdminBijouController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Bijou $bijou)
+    public function update(Request $request, gem $gem)
     {
         //
     }
@@ -60,7 +60,7 @@ class AdminBijouController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Bijou $bijou)
+    public function destroy(gem $gem)
     {
         //
     }
