@@ -3,5 +3,5 @@
 
 ## About CrownGems
 
-Main website for crowngemspvt.com
+
 
